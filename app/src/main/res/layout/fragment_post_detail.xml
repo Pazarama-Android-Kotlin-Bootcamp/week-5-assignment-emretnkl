@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataHolder"
+            type="com.emretnkl.week5Assignment.ui.postdetail.PostDetailFragment" />
+        <variable
+            name="viewModel"
+            type="com.emretnkl.week5Assignment.ui.postdetail.viewmodel.PostDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="24dp"
+        android:layout_marginHorizontal="24dp"
+        tools:context=".ui.postdetail.PostDetailFragment">
+
+        <LinearLayout
+            android:id="@+id/llDetailTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivFavourite"
+                android:src="@drawable/ic_baseline_favorite_24"
+                android:layout_gravity="end"
+                android:scaleType="centerCrop"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:text="Post Title"
+                android:paddingVertical="12dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDetailUserId"
+                android:text="User Id"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDetailBody"
+                android:text="Post body is gonna be here!"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
